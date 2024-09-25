@@ -4,51 +4,53 @@
     <head>
         <meta charset="UTF-8">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        <title>Compact Invoice Design</title>
+        <title>Modern Invoice Design</title>
         <style>
             body {
-                font-family: Arial, sans-serif;
+                font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
                 margin: 0;
                 padding: 10px;
-                background-color: #f0f0f0;
-                font-size: 12px;
+                background-color: #f4f4f9;
+                font-size: 13px;
+                color: #333;
             }
 
             .invoice {
-                background-color: white;
+                background-color: #fff;
                 width: 210mm;
-                height: auto;
                 margin: 0 auto;
                 padding: 20px;
-                box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+                box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+                border-radius: 8px;
             }
 
             .header {
-                background-color: #00A7D1;
-                color: white;
-                padding: 15px;
-                text-align: left;
+                background-color: #007B8F;
+                color: #fff;
+                padding: 20px;
+                border-radius: 8px 8px 0 0;
             }
 
             .company-name {
-                font-size: 22px;
+                font-size: 24px;
                 font-weight: bold;
                 margin-bottom: 5px;
             }
 
             .small-text {
-                font-size: 10px;
-                color: white;
+                font-size: 11px;
+                color: #e0e0e0;
             }
 
             .invoice-title {
-                background-color: #004d66;
+                background-color: #005f6b;
                 color: white;
-                padding: 10px;
-                font-size: 14px;
+                padding: 12px;
+                font-size: 16px;
                 font-weight: bold;
-                margin: 15px 0;
+                margin: 20px 0;
                 text-align: center;
+                border-radius: 4px;
             }
 
             table {
@@ -59,36 +61,46 @@
 
             th,
             td {
-                border: 1px solid #ccc;
-                padding: 6px;
+                border: 1px solid #ddd;
+                padding: 10px;
                 text-align: left;
                 font-size: 12px;
             }
 
             th {
-                background-color: #e0e0e0;
+                background-color: #f9f9f9;
+                font-weight: bold;
+            }
+
+            td {
+                background-color: #fff;
             }
 
             .total-row {
                 font-weight: bold;
-                background-color: #f0f8ff;
+                background-color: #eaf8ff;
+                border-top: 2px solid #007B8F;
             }
 
             .agent-name {
-                background-color: #e6fff9;
-                border: 1px solid #00A7D1;
-                padding: 5px;
+                background-color: #f0fcf8;
+                border: 1px solid #007B8F;
+                padding: 8px;
                 display: inline-block;
-                margin-top: 10px;
+                margin-top: 15px;
+                border-radius: 4px;
+                font-weight: 600;
+                color: #005f6b;
             }
 
             .amount-in-words {
-                margin-top: 15px;
+                margin-top: 20px;
                 padding: 10px;
                 font-size: 12px;
-                background-color: #eaf8ff;
-                border: 1px solid #00A7D1;
+                background-color: #f7faff;
+                border: 1px solid #007B8F;
                 font-style: italic;
+                border-radius: 4px;
             }
 
             .invoice-container {
@@ -113,7 +125,7 @@
 
             .invoice-to h2,
             .invoice-details h2 {
-                color: #004d66;
+                color: #005f6b;
                 margin-bottom: 10px;
             }
 
@@ -127,7 +139,7 @@
                 left: 0;
                 width: 100%;
                 height: 100px;
-                background-color: #00CED1;
+                background-color: #007B8F;
                 clip-path: path('M0,100 C150,0 350,200 800,100 L800,200 L0,200 Z');
             }
 
