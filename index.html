@@ -11,161 +11,150 @@
                 margin: 0;
                 padding: 20px;
                 box-sizing: border-box;
-                background-color: #f3f4f6;
-                color: #333;
+                background-color: #f8f9fa;
+                background: linear-gradient(135deg, #e0f7fa, #e3f2fd);
             }
 
             .invoice-container {
-                max-width: 850px;
+                max-width: 800px;
                 margin: 0 auto;
-                border: 2px solid #444;
+                border: 2px solid #00796b;
                 padding: 20px;
-                background: linear-gradient(120deg, #f0f4f8, #ffffff);
-                box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+                background-color: #ffffff;
+                box-shadow: 0 4px 20px rgba(0, 0, 0, 0.15);
                 border-radius: 10px;
             }
 
             .header {
                 text-align: center;
-                margin-bottom: 30px;
-                border-bottom: 2px solid #ff6f61;
-                padding-bottom: 15px;
-                color: gray;
+                margin-bottom: 20px;
+                border-bottom: 3px solid #00796b;
+                padding-bottom: 10px;
+                background-color: #004d40;
+                color: #ffffff;
                 border-radius: 8px 8px 0 0;
+                padding: 20px;
             }
 
             .header h1 {
                 margin: 0;
-                font-size: 32px;
-                text-transform: uppercase;
+                font-size: 30px;
+                letter-spacing: 2px;
             }
 
             .header p {
-                margin: 2px 0;
-                font-size: 16px;
+                margin: 5px 0;
+                font-size: 14px;
+                color: #c8e6c9;
             }
 
             .page-number {
                 text-align: right;
-                margin-bottom: 10px;
+                margin-bottom: 15px;
                 font-size: 16px;
                 font-weight: bold;
+                color: #00796b;
             }
 
             .order-details {
                 display: flex;
                 justify-content: space-between;
-                border: 2px solid #ff6f61;
-                background-color: #fff7f0;
-                margin-bottom: 20px;
+                border: 2px solid #00796b;
+                margin-bottom: 15px;
                 padding: 15px;
-                border-radius: 8px;
-                color: #333;
+                border-radius: 10px;
+                background-color: #e0f2f1;
             }
 
             .order-details>div {
                 flex: 1;
-                padding: 0 10px;
+                padding: 10px;
+                font-size: 14px;
             }
 
             .order-details h2 {
                 text-align: center;
                 margin: 0;
                 font-size: 20px;
-                background-color: #ff6f61;
-                color: white;
-                padding: 5px;
-                border-radius: 5px;
+                color: #004d40;
+                border-bottom: 2px solid #004d40;
             }
 
-            .buyer-supplier {
-                display: flex;
-                justify-content: space-between;
-                background-color: #e3f2fd;
-                padding: 15px;
-                margin-bottom: 20px;
-                border-radius: 8px;
-            }
-
-            .buyer-supplier>div {
-                flex: 1;
-                padding: 0 10px;
-            }
-
-            .buyer-supplier h3 {
-                margin: 0;
-                font-size: 18px;
-                color: #0d47a1;
-                border-bottom: 2px solid #0d47a1;
-                padding-bottom: 5px;
-            }
-
-            .buyer-supplier p {
-                margin: 5px 0;
-                font-size: 14px;
-            }
-
+            .buyer-supplier,
             .transport-info {
                 display: flex;
-                justify-content: space-between;
-                background-color: #e8f5e9;
-                /* Light green */
+                border: 2px solid #00796b;
+                margin-bottom: 15px;
                 padding: 15px;
-                margin-bottom: 20px;
-                border-radius: 8px;
+                border-radius: 10px;
+                background-color: #f1f8e9;
             }
 
+            .buyer-supplier>div,
             .transport-info>div {
                 flex: 1;
-                padding: 0 10px;
+                padding: 10px;
+                font-size: 14px;
+                border-right: 2px solid #00796b;
+            }
+
+            .buyer-supplier>div:last-child,
+            .transport-info>div:last-child {
+                border-right: none;
+            }
+
+            .buyer-supplier h3,
+            .transport-info h3 {
+                margin: 0 0 10px 0;
+                font-size: 16px;
+                color: #004d40;
+                text-transform: uppercase;
             }
 
             table {
                 width: 100%;
                 border-collapse: collapse;
                 margin-bottom: 20px;
-                border-radius: 8px;
-                overflow: hidden;
+                border: 2px solid #00796b;
             }
 
             th,
             td {
-                border: 1px solid #444;
+                border: 2px solid #00796b;
                 padding: 12px;
                 text-align: left;
+                vertical-align: top;
+                font-size: 14px;
             }
 
             th {
-                background-color: #4caf50;
-                color: white;
-                font-size: 16px;
+                background-color: #00796b;
+                color: #ffffff;
+                text-transform: uppercase;
             }
 
             tbody tr:nth-child(even) {
-                background-color: #f1f8e9;
-            }
-
-            tbody tr:nth-child(odd) {
-                background-color: #fafafa;
+                background-color: #e0f2f1;
             }
 
             .total-row {
+                border-top: 3px solid #004d40;
                 text-align: right;
                 padding: 15px;
-                background-color: #ffcc80;
-                color: #333;
                 font-weight: bold;
-                border-radius: 8px;
                 font-size: 18px;
+                color: #004d40;
+                background-color: #e8f5e9;
+                border-radius: 5px;
             }
 
             .notes {
                 font-weight: bold;
                 font-size: 16px;
                 background-color: #ffe082;
-                padding: 10px;
+                padding: 15px;
                 border-radius: 8px;
-                margin-bottom: 10px;
+                margin-bottom: 20px;
             }
 
             .footer {
@@ -173,7 +162,9 @@
                 text-align: right;
                 font-style: italic;
                 font-size: 14px;
-                color: #666;
+                color: #757575;
+                border-top: 2px solid #00796b;
+                padding-top: 10px;
             }
         </style>
     </head>
@@ -182,9 +173,7 @@
         <div class="invoice-container">
             <div class="header">
                 <h1>KP AGENCY</h1>
-                <p>ADD 1</p>
-                <p>ADD 2</p>
-                <p>ADD 3</p>
+                <p>ADD 1 | ADD 2 | ADD 3</p>
             </div>
             <div class="page-number">Page: 1 of 1</div>
             <div class="order-details">
