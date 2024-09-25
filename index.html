@@ -4,293 +4,289 @@
     <head>
         <meta charset="UTF-8">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        <title>Compact Invoice Design</title>
+        <title>KhataPlus Corporation Invoice</title>
         <style>
             body {
                 font-family: Arial, sans-serif;
                 margin: 0;
-                padding: 10px;
+                padding: 20px;
                 background-color: #f0f0f0;
-                font-size: 12px;
             }
 
             .invoice {
-                background-color: white;
-                width: 210mm;
-                height: 237mm;
+                max-width: 900px;
                 margin: 0 auto;
-                padding: 10px;
+                background-color: white;
                 box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
             }
 
             .header {
-                background-color: #00CED1;
-                color: black;
-                padding: 10px;
+                background-color: #f8f8f8;
+                padding: 20px;
                 position: relative;
                 overflow: hidden;
             }
 
-            .header::after {
-                content: '';
+            .header::before {
+                content: "";
                 position: absolute;
-                bottom: -25px;
-                left: 0;
-                right: 0;
-                height: 50px;
-                background-color: white;
-                transform: rotate(-2deg);
+                top: -50px;
+                left: -50px;
+                width: 100px;
+                height: 100px;
+                transform: rotate(45deg);
             }
 
             .company-name {
-                font-size: 18px;
+                font-size: 24px;
                 font-weight: bold;
                 margin-bottom: 5px;
+                margin-left: 10px;
+            }
+
+            .company-details {
+                font-size: 14px;
             }
 
             .invoice-title {
-                background-color: #00CED1;
-                color: black;
+                background-color: #00a2e8;
+                color: white;
+                padding: 10px;
+                display: flex;
+                justify-content: space-between;
+            }
+
+            .invoice-info {
+                display: flex;
+                justify-content: space-between;
+                padding: 10px;
+                background-color: #f0f0f0;
+            }
+
+            .invoice-info-column {
+                width: 48%;
+            }
+
+            .e-invoice,
+            .e-way-bill {
+                background-color: #00a2e8;
+                color: white;
                 padding: 5px;
-                font-size: 14px;
-                font-weight: bold;
                 margin-top: 10px;
+            }
+
+            .address-section {
+                display: flex;
+                justify-content: space-between;
+                padding: 10px;
+            }
+
+            .address-column {
+                width: 48%;
+            }
+
+            .address-title {
+                background-color: #00a2e8;
+                color: white;
+                padding: 5px;
             }
 
             table {
                 width: 100%;
                 border-collapse: collapse;
-                margin-top: 5px;
             }
 
             th,
             td {
                 border: 1px solid #ddd;
-                padding: 3px;
+                padding: 8px;
                 text-align: left;
             }
 
             th {
-                background-color: #f2f2f2;
+                background-color: #00a2e8;
+                color: white;
             }
 
             .total-row {
-                font-weight: bold;
-            }
-
-            .agent-name {
-                background-color: #e6fff9;
-                border: 1px solid #00CED1;
-                padding: 3px;
-                display: inline-block;
-                margin-top: 5px;
+                background-color: #00a2e8;
+                color: white;
             }
 
             .amount-in-words {
+                background-color: #00a2e8;
+                color: white;
+                padding: 10px;
                 margin-top: 10px;
-                font-style: italic;
             }
 
-            .small-text {
-                font-size: 10px;
+            .terms {
+                background-color: #f0f0f0;
+                padding: 10px;
             }
-            .invoice-container {
-            max-width: 800px;
-            margin: 0 auto;
-            border: 1px solid #ccc;
-            padding: 20px;
-            position: relative;
-        }
-        .invoice-header {
-            display: flex;
-            justify-content: space-between;
-            margin-bottom: 20px;
-        }
-        .invoice-to, .invoice-details {
-            flex: 1;
-        }
-        .invoice-to h2, .invoice-details h2 {
-            color: blue;
-            margin-bottom: 10px;
-        }
-        .invoice-details {
-            text-align: right;
-        }
-        .wave {
-            position: absolute;
-            bottom: 0;
-            left: 0;
-            width: 100%;
-            height: 100px;
-            background-color: #00CED1;
-            clip-path: path('M0,100 C150,0 350,200 800,100 L800,200 L0,200 Z');
-        }
-        .invoice-number {
-            position: absolute;
-            bottom: 10px;
-            left: 20px;
-            color: white;
-            font-weight: bold;
-        }
         </style>
     </head>
 
     <body>
         <div class="invoice">
             <div class="header">
-                <div class="company-name">ABC FASHIONS PVT LTD 5484548648</div>
-                <div class="small-text">ADD 1</div>
-                <div class="small-text">Add2</div>
-                <div class="small-text">GST NO:24AAACV8087F1Z6</div>
+                <div class="company-name">KhataPlus Corporation</div>
+                <div class="company-details">
+                    Add1<br>
+                    Add2<br>
+                    GST NO: 24AAACT8088F1Z6
+                </div>
             </div>
 
-            <div class="invoice-title">TAX INVOICE</div>
+            <div class="invoice-title">
+                <span>TAX INVOICE</span>
+                <span>B2B</span>
+            </div>
+
+            <div class="invoice-info">
+                <div class="invoice-info-column">
+                    <div>GSTIN: 10xxxx</div>
+                    <div>Invoice Period: 2022-2023</div>
+                    <div>Good sent to: Patna</div>
+                    <div>CASE: 5474123</div>
+                </div>
+                <div class="invoice-info-column">
+                    <div>Invoice No.: 10XXX</div>
+                    <div>Invoice Date: 26/12/2022</div>
+                    <div>L.R No: 654789</div>
+                    <div>L.R Date: 26/12/2022</div>
+                </div>
+            </div>
+
+            <div class="invoice-info">
+                <div class="invoice-info-column">
+                    <div class="e-invoice">e-Invoice</div>
+                    <div>IRN: 458765484455</div>
+                    <div>Ack Date: 26/12/2022</div>
+                    <div>Ack No: 1234568855</div>
+                </div>
+                <div class="invoice-info-column">
+                    <div class="e-way-bill">e-Way Bill</div>
+                    <div>e-Way No.: 456875</div>
+                    <div>e-Way Valid Till: 06/02/2023</div>
+                    <div>e-way Date: 01/01/2023</div>
+                </div>
+            </div>
+
+            <div class="address-section">
+                <div class="address-column">
+                    <div class="address-title">Billing Address</div>
+                    <div>Name: Party Name</div>
+                    <div>GSTIN/UID: 10XXX</div>
+                    <div>Address 1: Address 1</div>
+                    <div>Address 2: Address 2</div>
+                    <div>Address 3: Address 2</div>
+                    <div>City-PIN: CITY</div>
+                    <div>State: 10-BIHAR</div>
+                    <div>Ph/Mob: phone no.</div>
+                </div>
+                <div class="address-column">
+                    <div class="address-title">Shipping Address</div>
+                    <div>Party Name</div>
+                    <div>10XXX</div>
+                    <div>Address 1</div>
+                    <div>Address 2</div>
+                    <div>Address 2</div>
+                    <div>CITY</div>
+                    <div>10-BIHAR</div>
+                    <div>phone no.</div>
+                </div>
+            </div>
 
             <table>
-                <tr>
-                    <th>GSTIN</th>
-                    <td>10XXXXX</td>
-                    <th>Transport</th>
-                    <td>jai mata di</td>
-                    <th>Invoice No.</th>
-                    <td>6416</td>
-                </tr>
-                <tr>
-                    <th>Invoice Period</th>
-                    <td>2022-2023</td>
-                    <th>Destination</th>
-                    <td>patna</td>
-                    <th>Invoice Date</th>
-                    <td>28/12/2022</td>
-                </tr>
-                <tr>
-                    <th>Freight</th>
-                    <td>1500.00</td>
-                    <th>L.R.No</th>
-                    <td>123456</td>
-                    <th>CASE</th>
-                    <td>454685</td>
-                </tr>
-                <tr>
-                    <th>L.R.Date</th>
-                    <td colspan="5">28/12/2022</td>
-                </tr>
+                <thead>
+                    <tr>
+                        <th>SL.</th>
+                        <th>Quality</th>
+                        <th>Description Of Goods</th>
+                        <th>Company</th>
+                        <th>Hsn</th>
+                        <th>GST%</th>
+                        <th>Pcs</th>
+                        <th>Mtr</th>
+                        <th>Rate</th>
+                        <th>CD%</th>
+                        <th>Amount</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td>10</td>
+                        <td>Soap123456</td>
+                        <td>Dettol Cool12345678</td>
+                        <td>Dettol123456789</td>
+                        <td>3400011</td>
+                        <td>5%</td>
+                        <td>100</td>
+                        <td>mtr</td>
+                        <td>2000.00</td>
+                        <td>70.00</td>
+                        <td>200000.00</td>
+                    </tr>
+                    <tr class="total-row">
+                        <td colspan="6">Total</td>
+                        <td>240 P</td>
+                        <td>240 M</td>
+                        <td colspan="2"></td>
+                        <td>22000.00</td>
+                    </tr>
+                </tbody>
             </table>
 
-            <div class="invoice-title">Billing Address</div>
-
             <table>
                 <tr>
-                    <th>Name</th>
-                    <td>Party Name</td>
-                    <th>GST</th>
-                    <td>10xxx</td>
+                    <td>Taxable Value</td>
+                    <td>20000.00</td>
                 </tr>
                 <tr>
-                    <th>Address 1</th>
-                    <td>Address 1</td>
-                    <th>State</th>
-                    <td>10-BIHAR</td>
-                </tr>
-                <tr>
-                    <th>Address 2</th>
-                    <td>Address 2</td>
-                    <th>Ph.Mob</th>
-                    <td>phone no.</td>
-                </tr>
-                <tr>
-                    <th>Address 3</th>
-                    <td colspan="3">Address 3</td>
-                </tr>
-            </table>
-
-            <div class="agent-name">Agent Name: KHATAPLUS AGENCY</div>
-
-            <table>
-                <tr>
-                    <th>SL.</th>
-                    <th>Quality</th>
-                    <th>Description Of Goods</th>
-                    <th>Company</th>
-                    <th>Hsn</th>
-                    <th>Than</th>
-                    <th>P/M</th>
-                    <th>Rate</th>
-                    <th>Amt</th>
-                    <th>Less</th>
-                    <th>Add</th>
-                    <th>Tot.Amt</th>
-                </tr>
-                <tr>
-                    <td>1</td>
-                    <td>COTTON SAREE</td>
-                    <td>4321(JAIS) 1215428787E</td>
-                    <td>KOMAL1234563</td>
-                    <td>54075895</td>
-                    <td>100</td>
-                    <td>mtr</td>
-                    <td>844.00</td>
-                    <td>1644.00</td>
-                    <td>254.00</td>
-                    <td>116.00</td>
-                    <td>1416.50</td>
-                </tr>
-                <tr class="total-row">
-                    <td colspan="7">Total</td>
-                    <td colspan="5">1000.00</td>
-                </tr>
-            </table>
-
-            <table>
-                <tr>
-                    <th>Taxable Value</th>
-                    <td>220014</td>
-                    <th>Add CGST</th>
+                    <td>Add CGST</td>
                     <td>1000.00</td>
                 </tr>
                 <tr>
-                    <th>Add SGST</th>
+                    <td>Add SGST</td>
                     <td>1000.00</td>
-                    <th>Add IGST</th>
+                </tr>
+                <tr>
+                    <td>Add IGST</td>
                     <td>0.00</td>
                 </tr>
                 <tr>
-                    <th>Less</th>
+                    <td>Less</td>
                     <td>250.35</td>
-                    <th>Less 2:</th>
-                    <td>404.79</td>
                 </tr>
                 <tr>
-                    <th>Round Off</th>
+                    <td>Round Off</td>
                     <td>0.00</td>
-                    <th>Grand Total</th>
-                    <td class="total-row">22000.00</td>
+                </tr>
+                <tr>
+                    <td><strong>Grand Total</strong></td>
+                    <td><strong>Rs. 45875.00</strong></td>
                 </tr>
             </table>
 
             <div class="amount-in-words">
-                Amount In Words: Twenty Two Thousand Only
+                Amt In Word: Twenty Two Thousand
             </div>
-            <div class="invoice-container">
-                <div class="invoice-header">
-                    <div class="invoice-to">
-                        <h2>Invoice To</h2>
-                        <p>Party Name</p>
-                        <p>Address 1</p>
-                        <p>Address 2</p>
-                    </div>
-                    <div class="invoice-details">
-                        <h2>Invoice Details</h2>
-                        <p>Invoice No. 10XXX</p>
-                        <p>Invoice Date 26/12/2022</p>
-                        <p>Invoice Amt Rs. 458.00</p>
-                    </div>
-                </div>
-                <div class="wave"></div>
-                <div class="invoice-number">22044545600.00</div>
+
+            <div class="terms">
+                <strong>Terms & conditions:</strong>
+                <ul>
+                    <li>payment with in 30 days</li>
+                    <li>payment with in 30 days</li>
+                    <li>payment with in 30 days</li>
+                    <li>payment with in 30 days</li>
+                </ul>
+            </div>
+
+            <div style="text-align: right; padding: 10px;">
+                <strong>For: KhataPlus Corporation</strong>
             </div>
         </div>
-
     </body>
 
 </html>
