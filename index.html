@@ -4,253 +4,235 @@
     <head>
         <meta charset="UTF-8">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        <title>Settlement Slip</title>
+        <title>KP Agency Invoice</title>
         <style>
             body {
                 font-family: Arial, sans-serif;
-                margin-left: 230px;
-                height: 300px;
-                width: 1050px;
+                margin: 0;
                 padding: 20px;
-                background-color: #f0f0f0;
+                box-sizing: border-box;
             }
 
-            .container {
-                background-color: white;
+            .invoice-container {
+                max-width: 800px;
+                margin: 0 auto;
+                border: 1px solid #000;
                 padding: 20px;
-                box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
             }
 
             .header {
-                background-color: #87CEEB;
-                padding: 20px;
                 text-align: center;
-                color: black;
-                position: relative;
-                overflow: hidden;
-            }
-
-            .header::before {
-                content: "";
-                position: absolute;
-                bottom: -50px;
-                left: 0;
-                right: 0;
-                height: 100px;
-                background-color: white;
-                border-radius: 50% 50% 0 0;
+                margin-bottom: 20px;
             }
 
             .header h1 {
                 margin: 0;
-                position: relative;
-                z-index: 1;
+                font-size: 24px;
             }
 
             .header p {
                 margin: 5px 0;
-                font-size: 0.9em;
-                position: relative;
-                z-index: 1;
             }
 
-            .page-info {
+            .page-number {
                 text-align: right;
-                margin-top: 10px;
+                margin-bottom: 10px;
             }
 
-            .slip-details {
-                background-color: #87CEEB;
-                padding: 10px;
-                margin: 20px 0;
+            .order-details {
                 display: flex;
                 justify-content: space-between;
+                border: 1px solid #000;
+                margin-bottom: 10px;
             }
 
-            .details-grid {
-                display: grid;
-                grid-template-columns: 1fr 1fr;
-                gap: 10px;
-                margin-bottom: 20px;
+            .order-details>div {
+                flex: 1;
+                padding: 5px;
             }
 
-            .details-grid div {
-                display: grid;
-                grid-template-columns: auto 1fr;
-                gap: 5px;
-            }
-
-            .message {
-                background-color: #FFE4B5;
-                padding: 10px;
-                margin-bottom: 20px;
+            .order-details h2 {
                 text-align: center;
-                font-weight: bold;
+                margin: 0;
+                font-size: 18px;
+                border-bottom: 1px solid #000;
+            }
+
+            .buyer-supplier {
+                display: flex;
+                border: 1px solid #000;
+                margin-bottom: 10px;
+            }
+
+            .buyer-supplier>div {
+                flex: 1;
+                padding: 5px;
+            }
+
+            .buyer-supplier h3 {
+                margin: 0 0 5px 0;
+                font-size: 16px;
+            }
+
+            .transport-info {
+                display: flex;
+                border: 1px solid #000;
+                margin-bottom: 10px;
+            }
+
+            .transport-info>div {
+                flex: 1;
+                padding: 5px;
+                border-right: 1px solid #000;
+            }
+
+            .transport-info>div:last-child {
+                border-right: none;
             }
 
             table {
                 width: 100%;
                 border-collapse: collapse;
-                margin-bottom: 20px;
             }
 
             th,
             td {
-                border: 1px solid #ddd;
-                padding: 8px;
+                border: 1px solid #000;
+                padding: 5px;
                 text-align: left;
             }
 
-            th {
-                background-color: #87CEEB;
-            }
-
-            .summary {
-                display: grid;
-                grid-template-columns: auto 1fr;
-                gap: 5px;
-            }
-
-            .summary div:nth-child(even) {
+            .total-row {
+                border-top: 1px solid #000;
                 text-align: right;
+                padding: 5px;
             }
 
-            .total {
+            table {
+                width: 100%;
+                border-collapse: collapse;
+            }
+
+            th,
+            td {
+                border: 1px solid black;
+                padding: 8px;
+                text-align: left;
+                vertical-align: top;
+            }
+
+            th {
+                background-color: #f2f2f2;
+            }
+
+            .notes {
                 font-weight: bold;
+            }
+
+            .footer {
+                margin-top: 10px;
+                text-align: right;
+                font-style: italic;
             }
         </style>
     </head>
 
     <body>
-        <div class="container">
+        <div class="invoice-container">
             <div class="header">
-                <h1>KHATAPLUS AGENCY</h1>
-                <p>ADD1</p>
-                <p>Add2</p>
-                <p>GST NO:24AAACY808F1Z6/text></p>
+                <h1>KP AGENCY</h1>
+                <p>ADD 1</p>
+                <p>ADD 2</p>
+                <p>ADD 3</p>
             </div>
-            <div class="page-info">Page: 1 of 1</div>
-            <div class="slip-details">
-                <span>Slip No. : 629535335335</span>
-                <span>SETTLEMENT SLIP</span>
-                <span>Date. : 31/12/2021</span>
-            </div>
-            <div class="details-grid">
+            <div class="page-number">Page: 1 of 1</div>
+            <div class="order-details">
+                <div>Indent No. :- 6416</div>
                 <div>
-                    <strong>Supplier Details</strong>
-                    <div>
-                        <span>Name:</span>
-                        <span>Aakash Saree PVT LTD</span>
-                        <span>Address 1:</span>
-                        <span>Surat</span>
-                        <span>Address 2:</span>
-                        <span>ADD2</span>
-                        <span>Mobile:</span>
-                        <span>mobile</span>
-                        <span>GST:</span>
-                        <span>19XXXXX</span>
-                    </div>
+                    <h2>~:ORDER -- FORM:~</h2>
+                </div>
+                <div>Indent Dt. : 31/12/2021</div>
+            </div>
+            <div class="buyer-supplier">
+                <div>
+                    <h3>Buyers By :-</h3>
+                    <p>KP SYNTHETICS</p>
+                    <p>ADD1</p>
+                    <p>ADD2</p>
+                    <p>Ph : mobile</p>
+                    <p>GST: 10XXXX</p>
                 </div>
                 <div>
-                    <strong>Customer Details</strong>
-                    <div>
-                        <span>Name:</span>
-                        <span>Mohan Retail</span>
-                        <span>Address 1:</span>
-                        <span>Patna</span>
-                        <span>Address 2:</span>
-                        <span>Patna</span>
-                        <span>Mobile:</span>
-                        <span>mobile</span>
-                        <span>GST:</span>
-                        <span>10XXXXX</span>
-                    </div>
+                    <h3>Supplierssssssss :-</h3>
+                    <p>KP FABRICS</p>
+                    <p>ADD1</p>
+                    <p>ADD2</p>
+                    <p>Ph : mobile</p>
+                    <p>GST: 10XXXX</p>
                 </div>
             </div>
-            <div class="message">
-                DEAR SIR, ENCLOSING HEREWITH SETTLEMENT OF FOLLOWING BILLS.PLEASE SETTLE IN YOUR A/C.
+            <div class="transport-info">
+                <div>TRANSPORT : MATA</div>
+                <div>DESTINATION : GAYA</div>
+                <div>MADE BY : SOMEONE</div>
             </div>
             <table>
                 <thead>
                     <tr>
-                        <th>Chq No.</th>
-                        <th>Lsn Dt</th>
-                        <th>Amount</th>
-                        <th>Dep Bk</th>
-                        <th>Dep Dt</th>
-                        <th>Bill No.</th>
-                        <th>Bill Dt</th>
-                        <th>Bill Amt</th>
-                        <th>R.D</th>
-                        <th>CD%</th>
-                        <th>CD</th>
-                        <th>Days</th>
-                        <th>Intt.</th>
-                        <th>Net Amt</th>
+                        <th>SL.</th>
+                        <th>ITEM</th>
+                        <th>TRADE NO.</th>
+                        <th>SIZE</th>
+                        <th>PARTY NO.</th>
+                        <th>REMARKS</th>
+                        <th>MTR/PC/DOZ.</th>
+                        <th>RATE</th>
                     </tr>
                 </thead>
                 <tbody>
                     <tr>
-                        <td>006726</td>
-                        <td>10/12/2022</td>
-                        <td>326124.00</td>
-                        <td>kotak 54655</td>
-                        <td>12/12/2022</td>
-                        <td>4148</td>
-                        <td>06/06/202</td>
-                        <td>3834719.00</td>
-                        <td>125</td>
-                        <td>-4.00</td>
-                        <td>98.00</td>
-                        <td>25.00</td>
-                        <td>206.00</td>
-                        <td>65556.00</td>
-                    </tr>
-                    <tr>
-                        <td>006726</td>
-                        <td>10/12/2022</td>
-                        <td>38719</td>
-                        <td>kotak</td>
-                        <td>12/12/2022</td>
-                        <td>4148</td>
-                        <td>06/06/202</td>
-                        <td>38719.00</td>
-                        <td>125</td>
-                        <td>-4.00</td>
-                        <td>98.00</td>
-                        <td>25.00</td>
-                        <td>206.00</td>
-                        <td>65556.00</td>
+                        <td>1</td>
+                        <td>BLEACHED 3</td>
+                        <td>BUTTER MAX<br>24 MTR TO 30MTR<br>A-1 , B-1 , D-2 , E-2 , F-2 .</td>
+                        <td>36"<br>97 PIN</td>
+                        <td>FIN - NAWAB</td>
+                        <td>1 BALE<br>READY</td>
+                        <td>600 M</td>
+                        <td>74.00</td>
                     </tr>
                 </tbody>
             </table>
-            <div class="summary">
-                <div>BILL AMT:</div>
-                <div>70980.00</div>
-                <div>LESS SCHMEE:</div>
-                <div>29.00</div>
-                <div>LESS R.D:</div>
-                <div>625.00</div>
-                <div>LESS C.D:</div>
-                <div>-2698.00</div>
-                <div>TOTAL INTT:</div>
-                <div>414.00</div>
-                <div>LESS G.R:</div>
-                <div>1000.00</div>
-                <div>ADD (INTT) :</div>
-                <div>1001.00</div>
-                <div>LESS S.C:</div>
-                <div>26000.00</div>
-                <div>ADD (OTHER) :</div>
-                <div>887</div>
-                <div class="total">NETT AMT:</div>
-                <div class="total">45730.00</div>
-                <div>LESS PAID DD/CHQ:</div>
-                <div>45730.00</div>
-                <div class="total">BALANCE DUE:</div>
-                <div class="total">45730.00</div>
+            <div class="total-row">
+                <strong>Total</strong> 3000
+            </div>
+            <table>
+                <tr>
+                    <th colspan="2" class="notes">NOTES :- SAMPLE MUST IN BALES</th>
+                </tr>
+                <tr>
+                    <td>Remarks :</td>
+                    <td>
+                        Remarks1<br>
+                        Remarks2
+                    </td>
+                </tr>
+                <tr>
+                    <td>Terms :</td>
+                    <td>
+                        Terms1<br>
+                        Terms2
+                    </td>
+                </tr>
+                <tr>
+                    <td colspan="2">Subject to supplier confirmation and Jurisdiction</td>
+                </tr>
+            </table>
+            <div class="footer">
+                For: KhataPlus Corporation<br>
+                Continued on Page : 2
             </div>
         </div>
+
     </body>
 
 </html>
