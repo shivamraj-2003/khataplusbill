@@ -7,11 +7,11 @@
         <title>KP Agency Invoice</title>
         <style>
             body {
-                font-family: Arial, sans-serif;
+                font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
                 margin: 0;
                 padding: 20px;
                 box-sizing: border-box;
-                background-color: #f3f4f6;
+                background-color: #eef2f3;
                 color: #333;
             }
 
@@ -20,24 +20,24 @@
                 margin: 0 auto;
                 border: 2px solid #444;
                 padding: 20px;
-                background: linear-gradient(120deg, #f0f4f8, #ffffff);
-                box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
-                border-radius: 10px;
+                background: #ffffff;
+                box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
+                border-radius: 15px;
             }
 
             .header {
                 text-align: center;
-                margin-bottom: 30px;
-                border-bottom: 2px solid #ff6f61;
+                margin-bottom: 20px;
+                border-bottom: 3px solid #ff6f61;
                 padding-bottom: 15px;
-                color: gray;
-                border-radius: 8px 8px 0 0;
+                color: #444;
             }
 
             .header h1 {
                 margin: 0;
-                font-size: 32px;
+                font-size: 36px;
                 text-transform: uppercase;
+                letter-spacing: 1px;
             }
 
             .header p {
@@ -47,7 +47,7 @@
 
             .page-number {
                 text-align: right;
-                margin-bottom: 10px;
+                margin-bottom: 20px;
                 font-size: 16px;
                 font-weight: bold;
             }
@@ -55,12 +55,12 @@
             .order-details {
                 display: flex;
                 justify-content: space-between;
-                border: 2px solid greenyellow;
-                background-color: #fff7f0;
+                border: 2px solid #4caf50;
+                background-color: #f9f9f9;
                 margin-bottom: 20px;
                 padding: 15px;
-                border-radius: 8px;
-                color: #333;
+                border-radius: 10px;
+                box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
             }
 
             .order-details>div {
@@ -72,27 +72,31 @@
                 text-align: center;
                 margin: 0;
                 font-size: 20px;
-                background-color: grey;
-                color: white;
+                color: #fff;
+                background-color: #4caf50;
                 padding: 5px;
                 border-radius: 5px;
             }
 
-            .buyer-supplier {
+            .buyer-supplier,
+            .transport-info {
                 display: flex;
                 justify-content: space-between;
-                background-color: #e3f2fd;
+                background-color: #f0f4f8;
                 padding: 15px;
                 margin-bottom: 20px;
-                border-radius: 8px;
+                border-radius: 10px;
+                box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
             }
 
-            .buyer-supplier>div {
+            .buyer-supplier>div,
+            .transport-info>div {
                 flex: 1;
                 padding: 0 10px;
             }
 
-            .buyer-supplier h3 {
+            .buyer-supplier h3,
+            .transport-info h3 {
                 margin: 0;
                 font-size: 18px;
                 color: #0d47a1;
@@ -100,31 +104,17 @@
                 padding-bottom: 5px;
             }
 
-            .buyer-supplier p {
+            .buyer-supplier p,
+            .transport-info p {
                 margin: 5px 0;
                 font-size: 14px;
-            }
-
-            .transport-info {
-                display: flex;
-                justify-content: space-between;
-                background-color: #e8f5e9;
-                /* Light green */
-                padding: 15px;
-                margin-bottom: 20px;
-                border-radius: 8px;
-            }
-
-            .transport-info>div {
-                flex: 1;
-                padding: 0 10px;
             }
 
             table {
                 width: 100%;
                 border-collapse: collapse;
                 margin-bottom: 20px;
-                border-radius: 8px;
+                border-radius: 10px;
                 overflow: hidden;
             }
 
@@ -142,11 +132,11 @@
             }
 
             tbody tr:nth-child(even) {
-                background-color: #f1f8e9;
+                background-color: #f9f9f9;
             }
 
             tbody tr:nth-child(odd) {
-                background-color: #fafafa;
+                background-color: #ffffff;
             }
 
             .total-row {
@@ -155,8 +145,9 @@
                 background-color: #ffcc80;
                 color: #333;
                 font-weight: bold;
-                border-radius: 8px;
+                border-radius: 10px;
                 font-size: 18px;
+                box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
             }
 
             .notes {
@@ -164,8 +155,9 @@
                 font-size: 16px;
                 background-color: #ffe082;
                 padding: 10px;
-                border-radius: 8px;
+                border-radius: 10px;
                 margin-bottom: 10px;
+                box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
             }
 
             .footer {
@@ -174,6 +166,21 @@
                 font-style: italic;
                 font-size: 14px;
                 color: #666;
+            }
+
+            /* Hover effects */
+            th:hover {
+                background-color: #388e3c;
+            }
+
+            .order-details div:hover {
+                background-color: #e3f2fd;
+                transition: background-color 0.3s;
+            }
+
+            .buyer-supplier div:hover {
+                background-color: #bbdefb;
+                transition: background-color 0.3s;
             }
         </style>
     </head>
