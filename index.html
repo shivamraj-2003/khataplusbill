@@ -7,50 +7,47 @@
         <title>KP Agency Invoice</title>
         <style>
             body {
-                font-family: Arial, sans-serif;
+                font-family: 'Helvetica Neue', Arial, sans-serif;
                 margin: 0;
                 padding: 20px;
                 box-sizing: border-box;
-                background-color: #f8f9fa;
-                background: linear-gradient(135deg, #e0f7fa, #e3f2fd);
+                background: linear-gradient(120deg, #f0f4f8, #cfd8dc);
             }
 
             .invoice-container {
-                max-width: 800px;
+                max-width: 900px;
                 margin: 0 auto;
-                border: 2px solid #00796b;
+                border: 1px solid #009688;
                 padding: 20px;
                 background-color: #ffffff;
-                box-shadow: 0 4px 20px rgba(0, 0, 0, 0.15);
-                border-radius: 10px;
+                box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+                border-radius: 12px;
             }
 
             .header {
                 text-align: center;
-                margin-bottom: 20px;
-                border-bottom: 3px solid #00796b;
-                padding-bottom: 10px;
-                background-color: #004d40;
-                color: #ffffff;
-                border-radius: 8px 8px 0 0;
+                margin-bottom: 30px;
                 padding: 20px;
+                background-color: #009688;
+                color: #ffffff;
+                border-radius: 12px 12px 0 0;
             }
 
             .header h1 {
                 margin: 0;
-                font-size: 30px;
-                letter-spacing: 2px;
+                font-size: 36px;
+                letter-spacing: 1px;
             }
 
             .header p {
                 margin: 5px 0;
-                font-size: 14px;
-                color: #c8e6c9;
+                font-size: 16px;
+                color: #d1f0d0;
             }
 
             .page-number {
                 text-align: right;
-                margin-bottom: 15px;
+                margin-bottom: 20px;
                 font-size: 16px;
                 font-weight: bold;
                 color: #00796b;
@@ -59,14 +56,14 @@
             .order-details {
                 display: flex;
                 justify-content: space-between;
-                border: 2px solid #00796b;
-                margin-bottom: 15px;
+                margin-bottom: 25px;
                 padding: 15px;
+                border: 1px solid #009688;
                 border-radius: 10px;
-                background-color: #e0f2f1;
+                background-color: #e0f7fa;
             }
 
-            .order-details>div {
+            .order-details div {
                 flex: 1;
                 padding: 10px;
                 font-size: 14px;
@@ -75,31 +72,30 @@
             .order-details h2 {
                 text-align: center;
                 margin: 0;
-                font-size: 20px;
+                font-size: 22px;
                 color: #004d40;
-                border-bottom: 2px solid #004d40;
             }
 
             .buyer-supplier,
             .transport-info {
                 display: flex;
-                border: 2px solid #00796b;
-                margin-bottom: 15px;
+                margin-bottom: 25px;
                 padding: 15px;
+                border: 1px solid #009688;
                 border-radius: 10px;
                 background-color: #f1f8e9;
             }
 
-            .buyer-supplier>div,
-            .transport-info>div {
+            .buyer-supplier div,
+            .transport-info div {
                 flex: 1;
                 padding: 10px;
                 font-size: 14px;
-                border-right: 2px solid #00796b;
+                border-right: 1px solid #009688;
             }
 
-            .buyer-supplier>div:last-child,
-            .transport-info>div:last-child {
+            .buyer-supplier div:last-child,
+            .transport-info div:last-child {
                 border-right: none;
             }
 
@@ -107,20 +103,19 @@
             .transport-info h3 {
                 margin: 0 0 10px 0;
                 font-size: 16px;
-                color: #004d40;
+                color: #00796b;
                 text-transform: uppercase;
             }
 
             table {
                 width: 100%;
                 border-collapse: collapse;
-                margin-bottom: 20px;
-                border: 2px solid #00796b;
+                margin-bottom: 25px;
             }
 
             th,
             td {
-                border: 2px solid #00796b;
+                border: 1px solid #009688;
                 padding: 12px;
                 text-align: left;
                 vertical-align: top;
@@ -128,7 +123,7 @@
             }
 
             th {
-                background-color: #00796b;
+                background-color: #009688;
                 color: #ffffff;
                 text-transform: uppercase;
             }
@@ -138,14 +133,12 @@
             }
 
             .total-row {
-                border-top: 3px solid #004d40;
                 text-align: right;
                 padding: 15px;
                 font-weight: bold;
                 font-size: 18px;
                 color: #004d40;
-                background-color: #e8f5e9;
-                border-radius: 5px;
+                background-color: #e0f2f1;
             }
 
             .notes {
@@ -158,12 +151,12 @@
             }
 
             .footer {
-                margin-top: 20px;
+                margin-top: 30px;
                 text-align: right;
                 font-style: italic;
                 font-size: 14px;
                 color: #757575;
-                border-top: 2px solid #00796b;
+                border-top: 1px solid #009688;
                 padding-top: 10px;
             }
         </style>
@@ -177,34 +170,34 @@
             </div>
             <div class="page-number">Page: 1 of 1</div>
             <div class="order-details">
-                <div>Indent No. :- 6416</div>
+                <div>Indent No.: 6416</div>
                 <div>
-                    <h2>~:ORDER -- FORM:~</h2>
+                    <h2>ORDER FORM</h2>
                 </div>
-                <div>Indent Dt. : 31/12/2021</div>
+                <div>Indent Date: 31/12/2021</div>
             </div>
             <div class="buyer-supplier">
                 <div>
-                    <h3>Buyers By :-</h3>
+                    <h3>Buyers By:</h3>
                     <p>KP SYNTHETICS</p>
                     <p>ADD1</p>
                     <p>ADD2</p>
-                    <p>Ph : mobile</p>
+                    <p>Phone: mobile</p>
                     <p>GST: 10XXXX</p>
                 </div>
                 <div>
-                    <h3>Suppliers :-</h3>
+                    <h3>Suppliers:</h3>
                     <p>KP FABRICS</p>
                     <p>ADD1</p>
                     <p>ADD2</p>
-                    <p>Ph : mobile</p>
+                    <p>Phone: mobile</p>
                     <p>GST: 10XXXX</p>
                 </div>
             </div>
             <div class="transport-info">
-                <div>TRANSPORT : MATA</div>
-                <div>DESTINATION : GAYA</div>
-                <div>MADE BY : SOMEONE</div>
+                <div>Transport: MATA</div>
+                <div>Destination: GAYA</div>
+                <div>Made By: SOMEONE</div>
             </div>
             <table>
                 <thead>
@@ -223,7 +216,7 @@
                     <tr>
                         <td>1</td>
                         <td>BLEACHED 3</td>
-                        <td>BUTTER MAX<br>24 MTR TO 30MTR<br>A-1 , B-1 , D-2 , E-2 , F-2 .</td>
+                        <td>BUTTER MAX<br>24 MTR TO 30MTR<br>A-1, B-1, D-2, E-2, F-2.</td>
                         <td>36"<br>97 PIN</td>
                         <td>FIN - NAWAB</td>
                         <td>1 BALE<br>READY</td>
@@ -233,21 +226,21 @@
                 </tbody>
             </table>
             <div class="total-row">
-                <strong>Total</strong> 3000
+                <strong>Total:</strong> 3000
             </div>
             <table>
                 <tr>
-                    <th colspan="2" class="notes">NOTES :- SAMPLE MUST IN BALES</th>
+                    <th colspan="2" class="notes">NOTES: SAMPLE MUST IN BALES</th>
                 </tr>
                 <tr>
-                    <td>Remarks :</td>
+                    <td>Remarks:</td>
                     <td>
                         Remarks1<br>
                         Remarks2
                     </td>
                 </tr>
                 <tr>
-                    <td>Terms :</td>
+                    <td>Terms:</td>
                     <td>
                         Terms1<br>
                         Terms2
@@ -259,7 +252,7 @@
             </table>
             <div class="footer">
                 For: KhataPlus Corporation<br>
-                Continued on Page : 2
+                Continued on Page: 2
             </div>
         </div>
     </body>
