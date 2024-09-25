@@ -9,76 +9,62 @@
             body {
                 font-family: Arial, sans-serif;
                 margin: 0;
-                padding: 20px;
+                padding: 10px;
                 background-color: #f0f0f0;
             }
 
             .invoice {
-                max-width: 900px;
+                max-width: 950px;
                 margin: 0 auto;
                 background-color: white;
                 box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+                padding: 15px;
             }
 
             .header {
                 background-color: #f8f8f8;
                 padding: 20px;
                 position: relative;
-                overflow: hidden;
-            }
-
-            .header::before {
-                content: "";
-                position: absolute;
-                top: -50px;
-                left: -50px;
-                width: 100px;
-                height: 100px;
-                transform: rotate(45deg);
             }
 
             .company-name {
                 font-size: 24px;
                 font-weight: bold;
                 margin-bottom: 5px;
-                margin-left: 10px;
             }
 
             .company-details {
                 font-size: 14px;
+                margin-bottom: 20px;
             }
 
             .invoice-title {
                 background-color: #00a2e8;
                 color: white;
                 padding: 10px;
-                display: flex;
-                justify-content: space-between;
+                text-align: center;
+                margin-bottom: 10px;
+                font-size: 18px;
             }
 
             .invoice-info {
                 display: flex;
                 justify-content: space-between;
-                padding: 10px;
-                background-color: #f0f0f0;
+                margin-bottom: 15px;
             }
 
             .invoice-info-column {
                 width: 48%;
             }
 
-            .e-invoice,
-            .e-way-bill {
-                background-color: #00a2e8;
-                color: white;
-                padding: 5px;
-                margin-top: 10px;
+            .invoice-info div {
+                margin-bottom: 5px;
             }
 
             .address-section {
                 display: flex;
                 justify-content: space-between;
-                padding: 10px;
+                margin-bottom: 15px;
             }
 
             .address-column {
@@ -89,11 +75,13 @@
                 background-color: #00a2e8;
                 color: white;
                 padding: 5px;
+                margin-bottom: 10px;
             }
 
             table {
                 width: 100%;
                 border-collapse: collapse;
+                margin-bottom: 20px;
             }
 
             th,
@@ -101,6 +89,7 @@
                 border: 1px solid #ddd;
                 padding: 8px;
                 text-align: left;
+                font-size: 12px;
             }
 
             th {
@@ -117,13 +106,77 @@
                 background-color: #00a2e8;
                 color: white;
                 padding: 10px;
+                font-size: 14px;
                 margin-top: 10px;
             }
 
             .terms {
                 background-color: #f0f0f0;
                 padding: 10px;
+                margin-top: 10px;
             }
+
+            .terms ul {
+                margin: 0;
+                padding-left: 20px;
+            }
+
+            .wave {
+                position: absolute;
+                bottom: 0;
+                left: 0;
+                width: 100%;
+                height: 100px;
+                background-color: #00CED1;
+                clip-path: path('M0,100 C150,0 350,200 800,100 L800,200 L0,200 Z');
+            }
+
+            .invoice-number {
+                position: absolute;
+                bottom: 10px;
+                left: 20px;
+                color: white;
+                font-weight: bold;
+            }
+
+           .invoice-container {
+            max-width: 800px;
+            margin: 0 auto;
+            
+            padding: 20px;
+            position: relative;
+        }
+        .invoice-header {
+            display: flex;
+            justify-content: space-between;
+            margin-bottom: 20px;
+        }
+        .invoice-to, .invoice-details {
+            flex: 1;
+        }
+        .invoice-to h2, .invoice-details h2 {
+            color: blue;
+            margin-bottom: 10px;
+        }
+        .invoice-details {
+            text-align: right;
+        }
+        .wave {
+            position: absolute;
+            bottom: 0;
+            left: 0;
+            width: 100%;
+            height: 100px;
+            background-color: #00CED1;
+            clip-path: path('M0,100 C150,0 350,200 800,100 L800,200 L0,200 Z');
+        }
+        .invoice-number {
+            position: absolute;
+            bottom: 10px;
+            left: 20px;
+            color: white;
+            font-weight: bold;
+        }
         </style>
     </head>
 
@@ -139,8 +192,7 @@
             </div>
 
             <div class="invoice-title">
-                <span>TAX INVOICE</span>
-                <span>B2B</span>
+                TAX INVOICE
             </div>
 
             <div class="invoice-info">
@@ -158,21 +210,6 @@
                 </div>
             </div>
 
-            <div class="invoice-info">
-                <div class="invoice-info-column">
-                    <div class="e-invoice">e-Invoice</div>
-                    <div>IRN: 458765484455</div>
-                    <div>Ack Date: 26/12/2022</div>
-                    <div>Ack No: 1234568855</div>
-                </div>
-                <div class="invoice-info-column">
-                    <div class="e-way-bill">e-Way Bill</div>
-                    <div>e-Way No.: 456875</div>
-                    <div>e-Way Valid Till: 06/02/2023</div>
-                    <div>e-way Date: 01/01/2023</div>
-                </div>
-            </div>
-
             <div class="address-section">
                 <div class="address-column">
                     <div class="address-title">Billing Address</div>
@@ -180,7 +217,7 @@
                     <div>GSTIN/UID: 10XXX</div>
                     <div>Address 1: Address 1</div>
                     <div>Address 2: Address 2</div>
-                    <div>Address 3: Address 2</div>
+                    <div>Address 3: Address 3</div>
                     <div>City-PIN: CITY</div>
                     <div>State: 10-BIHAR</div>
                     <div>Ph/Mob: phone no.</div>
@@ -188,13 +225,13 @@
                 <div class="address-column">
                     <div class="address-title">Shipping Address</div>
                     <div>Party Name</div>
-                    <div>10XXX</div>
+                    <div>GSTIN/UID: 10XXX</div>
                     <div>Address 1</div>
                     <div>Address 2</div>
-                    <div>Address 2</div>
+                    <div>Address 3</div>
                     <div>CITY</div>
-                    <div>10-BIHAR</div>
-                    <div>phone no.</div>
+                    <div>State: 10-BIHAR</div>
+                    <div>Ph/Mob: phone no.</div>
                 </div>
             </div>
 
@@ -252,10 +289,6 @@
                     <td>1000.00</td>
                 </tr>
                 <tr>
-                    <td>Add IGST</td>
-                    <td>0.00</td>
-                </tr>
-                <tr>
                     <td>Less</td>
                     <td>250.35</td>
                 </tr>
@@ -270,22 +303,34 @@
             </table>
 
             <div class="amount-in-words">
-                Amt In Word: Twenty Two Thousand
+                Amt In Word: Twenty Two Thousand Only
             </div>
 
             <div class="terms">
-                <strong>Terms & conditions:</strong>
+                <strong>Terms & Conditions:</strong>
                 <ul>
-                    <li>payment with in 30 days</li>
-                    <li>payment with in 30 days</li>
-                    <li>payment with in 30 days</li>
-                    <li>payment with in 30 days</li>
+                    <li>Payment within 30 days</li>
+                    <li>Interest will be charged for overdue payments</li>
                 </ul>
             </div>
-
-            <div style="text-align: right; padding: 10px;">
-                <strong>For: KhataPlus Corporation</strong>
-            </div>
+<div class="invoice-container">
+    <div class="invoice-header">
+        <div class="invoice-to">
+            <h2>Invoice To</h2>
+            <p>Party Name</p>
+            <p>Address 1</p>
+            <p>Address 2</p>
+        </div>
+        <div class="invoice-details">
+            <h2>Invoice Details</h2>
+            <p>Invoice No. 10XXX</p>
+            <p>Invoice Date 26/12/2022</p>
+            <p>Invoice Amt Rs. 458.00</p>
+        </div>
+    </div>
+    <div class="wave"></div>
+    <div class="invoice-number">22044545600.00</div>
+</div>
         </div>
     </body>
 
