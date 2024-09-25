@@ -9,43 +9,59 @@
             body {
                 font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
                 margin: 0;
-                padding: 10px;
-                background-color: #f0f4f8;
+                padding: 20px;
+                background-color: #f9f9f9;
             }
 
             .invoice {
                 max-width: 950px;
-                margin: 20px auto;
+                margin: 0 auto;
                 background-color: white;
                 box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
                 border-radius: 10px;
                 overflow: hidden;
+                padding: 20px;
             }
 
-            .header {
-                background-color: #007bff;
-                color: white;
-                padding: 30px;
-                text-align: center;
-            }
+            header {
+        background-color: #007bff;
+        color: white;
+        padding: 30px;
+        text-align: center;
+        position: relative;
+        border-radius: 10px 10px 0 0; 
+    }
 
-            .company-name {
-                font-size: 28px;
-                font-weight: bold;
-            }
+    .company-logo {
+        max-width: 190px; 
+        height: 70px;
+        position: absolute;
+        top: 40px; 
+        left: 900px; 
+    }
 
-            .company-details {
-                font-size: 14px;
-                margin-top: 10px;
-            }
+    .company-name {
+        font-size: 28px;
+        font-weight: bold;
+        margin: 0; 
+        text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.2);
+    }
+
+    .company-details {
+        font-size: 14px;
+        margin-top: 5px;
+        line-height: 1.5; 
+    }
 
             .invoice-title {
                 background-color: #28a745;
                 color: white;
                 padding: 15px;
                 text-align: center;
-                font-size: 22px;
-                letter-spacing: 1px;
+                font-size: 24px;
+                margin: 20px 0;
+                border-radius: 5px;
+                box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
             }
 
             .invoice-info {
@@ -68,6 +84,7 @@
                 display: flex;
                 justify-content: space-between;
                 padding: 15px;
+                margin: 20px 0;
             }
 
             .address-column {
@@ -77,9 +94,10 @@
             .address-title {
                 background-color: #007bff;
                 color: white;
-                padding: 5px;
+                padding: 10px;
                 margin-bottom: 10px;
                 text-align: center;
+                border-radius: 5px;
             }
 
             table {
@@ -113,13 +131,16 @@
                 font-size: 16px;
                 margin-top: 10px;
                 text-align: center;
+                border-radius: 5px;
+                box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
             }
 
             .terms {
-                background-color: #f9f9f9;
+                background-color: #f0f4f8;
                 padding: 15px;
                 margin-top: 10px;
                 border: 1px solid #ddd;
+                border-radius: 5px;
             }
 
             .terms ul {
@@ -128,41 +149,7 @@
                 list-style-type: disc;
             }
 
-            .wave {
-                position: relative;
-                height: 100px;
-                background-color: #007bff;
-                clip-path: polygon(0 100%, 100% 80%, 100% 100%, 0 100%);
-            }
-
-            .invoice-number {
-                position: absolute;
-                bottom: 30px;
-                left: 20px;
-                color: white;
-                font-weight: bold;
-                font-size: 20px;
-            }
-
-            .signature {
-                margin-top: 20px;
-                padding: 20px;
-                text-align: center;
-            }
-
-            .signature-line {
-                border-top: 1px solid #ddd;
-                width: 200px;
-                margin: 0 auto;
-            }
-
-            .footer-text {
-                text-align: center;
-                font-size: 12px;
-                color: #555;
-                margin-top: 10px;
-            }
-             .invoice-container {
+            .invoice-container {
             max-width: 800px;
             margin: 0 auto;
             
@@ -185,7 +172,6 @@
             text-align: right;
         }
         .wave {
-            position: absolute;
             bottom: 0;
             left: 0;
             width: 100%;
@@ -194,18 +180,57 @@
             clip-path: path('M0,100 C150,0 350,200 800,100 L800,200 L0,200 Z');
         }
         .invoice-number {
-            position: absolute;
             bottom: 10px;
             left: 20px;
             color: white;
             font-weight: bold;
         }
+
+            .signature {
+                margin-top: 20px;
+                padding: 20px;
+                text-align: center;
+            }
+
+            .signature-line {
+                border-top: 1px solid #ddd;
+                width: 200px;
+                margin: 0 auto;
+            }
+
+            .footer-text {
+                text-align: center;
+                font-size: 12px;
+                color: #555;
+                margin-top: 10px;
+            }
+
+            @media (max-width: 600px) {
+                .invoice-info {
+                    flex-direction: column;
+                }
+
+                .invoice-info-column {
+                    width: 100%;
+                    margin-bottom: 10px;
+                }
+
+                .address-section {
+                    flex-direction: column;
+                }
+
+                .address-column {
+                    width: 100%;
+                    margin-bottom: 10px;
+                }
+            }
         </style>
     </head>
 
     <body>
         <div class="invoice">
             <div class="header">
+                <img src="logo.png" alt="KhataPlus Logo" class="company-logo">
                 <div class="company-name">KhataPlus Corporation</div>
                 <div class="company-details">
                     Address Line 1<br>
@@ -316,54 +341,55 @@
                     <td>250.35</td>
                 </tr>
                 <tr>
-                    <td>Round Off</td>
-                    <td>0.00</td>
-                </tr>
-                <tr>
-                    <td><strong>Grand Total</strong></td>
-                    <td><strong>Rs. 45875.00</strong></td>
+                    <td>Total Amount</td>
+                    <td>22000.00</td>
                 </tr>
             </table>
 
-            <div class="amount-in-words">
-                Amount In Words: Twenty Two Thousand Only
-            </div>
+            <div class="amount-in-words">Amount in Words: Twenty-Two Thousand Only</div>
 
             <div class="terms">
-                <strong>Terms & Conditions:</strong>
+                <strong>Terms and Conditions:</strong>
                 <ul>
-                    <li>Payment within 30 days</li>
-                                        <li>Payment within 30 days</li>
-                    <li>Payment within 30 days</li>
-                    <li>Payment within 30 days</li>
-                    <li>Payment within 30 days</li>
-                    <li>Payment within 30 days</li>
-                    <li>Payment within 30 days</li>
-                    <li>Payment within 30 days</li>
+                    <li> Payment with in 30 days</li>
+                                        <li> Payment with in 30 days</li>
+                    <li> Payment with in 30 days</li>
+                    <li> Payment with in 30 days</li>
+                    <li> Payment with in 30 days</li>
+                    <li> Payment with in 30 days</li>
+                    <li> Payment with in 30 days</li>
+                    <li> Payment with in 30 days</li>
 
                 </ul>
-                <div class="invoice-container">
-                    <div class="invoice-header">
-                        <div class="invoice-to">
-                            <h2>Invoice To</h2>
-                            <p>Party Name</p>
-                            <p>Address 1</p>
-                            <p>Address 2</p>
-                        </div>
-                        <div class="invoice-details">
-                            <h2>Invoice Details</h2>
-                            <p>Invoice No. 10XXX</p>
-                            <p>Invoice Date 26/12/2022</p>
-                            <p>Invoice Amt Rs. 458.00</p>
-                        </div>
-                    </div>
-                    <div class="wave"></div>
-                    <div class="invoice-number">22044545600.00</div>
-                </div>
+            </div>
+<div class="invoice-container"></div>
+    <div class="invoice-header">
+        <div class="invoice-to">
+            <h2>Invoice To</h2>
+            <p>Party Name</p>
+            <p>Address 1</p>
+            <p>Address 2</p>
+        </div>
+        <div class="invoice-details">
+            <h2>Invoice Details</h2>
+            <p>Invoice No. 10XXX</p>
+            <p>Invoice Date 26/12/2022</p>
+            <p>Invoice Amt Rs. 458.00</p>
+        </div>
+    </div>
+    <div class="wave"></div>
+    <div class="invoice-number">22044545600.00</div>
+    <div class="signature">
+                <div>Authorized Signatory</div>
+                <div class="signature-line"></div>
             </div>
 
+            <div class="footer-text">Thank you for your business!</div>
+</div>
+            
 
             
+        </div>
     </body>
 
 </html>
