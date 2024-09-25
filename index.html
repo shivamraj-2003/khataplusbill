@@ -79,6 +79,55 @@
             .total-row {
                 font-weight: bold;
             }
+
+            .invoice-footer {
+                max-width: 800px;
+                margin: 0 auto;
+                background-color: white;
+                border: 1px solid #ccc;
+                padding: 20px;
+                box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+            }
+
+            .amount-in-words {
+                border-bottom: 1px solid #000;
+                padding-bottom: 10px;
+                margin-bottom: 10px;
+                font-weight: bold;
+            }
+
+            .terms {
+                margin-bottom: 20px;
+            }
+
+            .terms h4 {
+                margin: 0 0 5px 0;
+            }
+
+            .terms p {
+                margin: 0;
+            }
+
+            .footer-bottom {
+                display: flex;
+                justify-content: space-between;
+                align-items: flex-end;
+            }
+
+            .checked-by {
+                flex: 1;
+                text-align: center;
+            }
+
+            .for-company {
+                flex: 1;
+                text-align: right;
+            }
+
+            .page-number {
+                font-style: italic;
+                margin-top: 10px;
+            }
         </style>
     </head>
 
@@ -166,6 +215,26 @@
                     </tr>
                 </tbody>
             </table>
+            <div class="invoice-footer">
+                <div class="amount-in-words">
+                    Rs. Twenty Two Thousand Only
+                </div>
+                <div class="terms">
+                    <h4>Terms & Condition:</h4>
+                    <p>1. Bill to Bill Payment.</p>
+                </div>
+                <div class="footer-bottom">
+                    <div class="checked-by">
+                        Checked By E.&O.E
+                    </div>
+                    <div class="for-company">
+                        For: KhataPlus Corporation</div>
+                </div>
+            </div>
+            <div class="page-number">
+                Continued on Page : 2
+            </div>
+        </div>
         </div>
     </body>
 
