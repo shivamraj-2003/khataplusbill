@@ -17,131 +17,137 @@
             .invoice {
                 background-color: white;
                 width: 210mm;
-                height: 237mm;
+                height: auto;
                 margin: 0 auto;
-                padding: 10px;
+                padding: 20px;
                 box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
             }
 
             .header {
-                background-color: #00CED1;
-                color: black;
-                padding: 10px;
-                position: relative;
-                overflow: hidden;
-            }
-
-            .header::after {
-                content: '';
-                position: absolute;
-                bottom: -25px;
-                left: 0;
-                right: 0;
-                height: 50px;
-                background-color: white;
-                transform: rotate(-2deg);
+                background-color: #00A7D1;
+                color: white;
+                padding: 15px;
+                text-align: left;
             }
 
             .company-name {
-                font-size: 18px;
+                font-size: 22px;
                 font-weight: bold;
                 margin-bottom: 5px;
             }
 
+            .small-text {
+                font-size: 10px;
+                color: white;
+            }
+
             .invoice-title {
-                background-color: #00CED1;
-                color: black;
-                padding: 5px;
+                background-color: #004d66;
+                color: white;
+                padding: 10px;
                 font-size: 14px;
                 font-weight: bold;
-                margin-top: 10px;
+                margin: 15px 0;
+                text-align: center;
             }
 
             table {
                 width: 100%;
                 border-collapse: collapse;
-                margin-top: 5px;
+                margin-top: 10px;
             }
 
             th,
             td {
-                border: 1px solid #ddd;
-                padding: 3px;
+                border: 1px solid #ccc;
+                padding: 6px;
                 text-align: left;
+                font-size: 12px;
             }
 
             th {
-                background-color: #f2f2f2;
+                background-color: #e0e0e0;
             }
 
             .total-row {
                 font-weight: bold;
+                background-color: #f0f8ff;
             }
 
             .agent-name {
                 background-color: #e6fff9;
-                border: 1px solid #00CED1;
-                padding: 3px;
+                border: 1px solid #00A7D1;
+                padding: 5px;
                 display: inline-block;
-                margin-top: 5px;
+                margin-top: 10px;
             }
 
             .amount-in-words {
-                margin-top: 10px;
+                margin-top: 15px;
+                padding: 10px;
+                font-size: 12px;
+                background-color: #eaf8ff;
+                border: 1px solid #00A7D1;
                 font-style: italic;
             }
 
-            .small-text {
-                font-size: 10px;
-            }
             .invoice-container {
-            max-width: 800px;
-            margin: 0 auto;
-            border: 1px solid #ccc;
-            padding: 20px;
-            position: relative;
-        }
-        .invoice-header {
-            display: flex;
-            justify-content: space-between;
-            margin-bottom: 20px;
-        }
-        .invoice-to, .invoice-details {
-            flex: 1;
-        }
-        .invoice-to h2, .invoice-details h2 {
-            color: blue;
-            margin-bottom: 10px;
-        }
-        .invoice-details {
-            text-align: right;
-        }
-        .wave {
-            position: absolute;
-            bottom: 0;
-            left: 0;
-            width: 100%;
-            height: 100px;
-            background-color: #00CED1;
-            clip-path: path('M0,100 C150,0 350,200 800,100 L800,200 L0,200 Z');
-        }
-        .invoice-number {
-            position: absolute;
-            bottom: 10px;
-            left: 20px;
-            color: white;
-            font-weight: bold;
-        }
+                max-width: 800px;
+                margin: 0 auto;
+                border: 1px solid #ccc;
+                padding: 20px;
+                position: relative;
+                margin-top: 20px;
+            }
+
+            .invoice-header {
+                display: flex;
+                justify-content: space-between;
+                margin-bottom: 20px;
+            }
+
+            .invoice-to,
+            .invoice-details {
+                flex: 1;
+            }
+
+            .invoice-to h2,
+            .invoice-details h2 {
+                color: #004d66;
+                margin-bottom: 10px;
+            }
+
+            .invoice-details {
+                text-align: right;
+            }
+
+            .wave {
+                position: absolute;
+                bottom: 0;
+                left: 0;
+                width: 100%;
+                height: 100px;
+                background-color: #00CED1;
+                clip-path: path('M0,100 C150,0 350,200 800,100 L800,200 L0,200 Z');
+            }
+
+            .invoice-number {
+                position: absolute;
+                bottom: 10px;
+                left: 20px;
+                color: white;
+                font-weight: bold;
+            }
         </style>
     </head>
 
     <body>
         <div class="invoice">
             <div class="header">
-                <div class="company-name">ABC FASHIONS PVT LTD 5484548648</div>
+                <div class="company-name">ABC FASHIONS PVT LTD</div>
                 <div class="small-text">ADD 1</div>
-                <div class="small-text">Add2</div>
-                <div class="small-text">GST NO:24AAACV8087F1Z6</div>
+                <div class="small-text">ADD 2</div>
+                <div class="small-text">GST NO: 24AAACV8087F1Z6</div>
             </div>
 
             <div class="invoice-title">TAX INVOICE</div>
@@ -151,7 +157,7 @@
                     <th>GSTIN</th>
                     <td>10XXXXX</td>
                     <th>Transport</th>
-                    <td>jai mata di</td>
+                    <td>Jai Mata Di</td>
                     <th>Invoice No.</th>
                     <td>6416</td>
                 </tr>
@@ -159,7 +165,7 @@
                     <th>Invoice Period</th>
                     <td>2022-2023</td>
                     <th>Destination</th>
-                    <td>patna</td>
+                    <td>Patna</td>
                     <th>Invoice Date</th>
                     <td>28/12/2022</td>
                 </tr>
@@ -195,8 +201,8 @@
                 <tr>
                     <th>Address 2</th>
                     <td>Address 2</td>
-                    <th>Ph.Mob</th>
-                    <td>phone no.</td>
+                    <th>Ph/Mob</th>
+                    <td>Phone No.</td>
                 </tr>
                 <tr>
                     <th>Address 3</th>
@@ -257,7 +263,7 @@
                 <tr>
                     <th>Less</th>
                     <td>250.35</td>
-                    <th>Less 2:</th>
+                    <th>Less 2</th>
                     <td>404.79</td>
                 </tr>
                 <tr>
@@ -271,6 +277,7 @@
             <div class="amount-in-words">
                 Amount In Words: Twenty Two Thousand Only
             </div>
+
             <div class="invoice-container">
                 <div class="invoice-header">
                     <div class="invoice-to">
@@ -281,16 +288,15 @@
                     </div>
                     <div class="invoice-details">
                         <h2>Invoice Details</h2>
-                        <p>Invoice No. 10XXX</p>
-                        <p>Invoice Date 26/12/2022</p>
-                        <p>Invoice Amt Rs. 458.00</p>
+                        <p>Invoice No: 10XXX</p>
+                        <p>Invoice Date: 26/12/2022</p>
+                        <p>Invoice Amt: Rs. 458.00</p>
                     </div>
                 </div>
                 <div class="wave"></div>
                 <div class="invoice-number">22044545600.00</div>
             </div>
         </div>
-
     </body>
 
 </html>
